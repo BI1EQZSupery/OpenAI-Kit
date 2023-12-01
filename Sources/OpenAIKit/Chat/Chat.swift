@@ -32,6 +32,13 @@ extension Chat {
     }
 }
 
+extension Chat {
+    public enum ResponseFormat: String, Codable {
+        case text = "text"
+        case json = "json_object"
+    }
+}
+
 extension Chat.Message: Codable {
     private enum CodingKeys: String, CodingKey {
         case role
